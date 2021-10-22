@@ -34,3 +34,8 @@ app.get('/paint', function(req, res){
     const path = 'demo.html';
     res.render(path);
 });
+
+app.get('/integration', function(req, res){
+    const path = 'integration.html';
+    res.render(path);
+});
