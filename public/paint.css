@@ -26,7 +26,7 @@
 }
 
 .paint-canvas-background {
-	background-image: url("images/transparent.png");
+	background: url("images/body.png") no-repeat center center fixed;
 }
 
 .paint-selected-tool {
