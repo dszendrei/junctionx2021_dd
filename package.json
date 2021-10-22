@@ -1,0 +1,21 @@
+{
+  "name": "junctionx2021",
+  "version": "0.1.0",
+  "description": "Frau Saxi webpage",
+  "engines": {
+    "node": "15.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "basic-ftp": "^4.6.6",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1"
+  },
+  "keywords": [
+    "junctionx2021"
+  ],
+  "license": "dszendrei"
+}
