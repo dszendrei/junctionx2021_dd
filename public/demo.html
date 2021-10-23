@@ -10,9 +10,13 @@
 		<title>Paint demo</title>
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Squarific Paint.">
+		<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+		<script src="paintDD.js"></script>
 	</head>
 	<body style="position:relative; padding:0; margin:0; min-height: 100%;">
-		<div id="fullscreen" style="position:absolute; left:0; right:0; top:0; bottom:0;"></div>
+		<div id="fullscreen" style="position:absolute; left:0; right:0; top:0; bottom:0;">
+			<button style="z-index: 1000; position: absolute; right: 10px; bottom: 10px;" onclick="saveImage()">Save image</button>
+		</div>
 		<script src="jquery.js"></script>
 		<script src="Paint.min.js"></script>
 		<script type="text/javascript">
