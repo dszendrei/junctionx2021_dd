@@ -1,9 +1,11 @@
 const express = require('express');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
+const cors = require('cors'); 
 
 const app = express();
 
+app.use(cors());
 app.set('port', (process.env.PORT || 5050));
 app.use(express.static(__dirname + '/public'));
 app.use('/modules', express.static(__dirname + '/node_modules/'));

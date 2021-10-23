@@ -1057,7 +1057,7 @@ Paint.prototype.createControlArray = function createControlArray () {
 		text: "Tool size",
 		min: 1,
 		max: this.defaultSettings.maxSize,
-		value: 5,
+		value: 32,
 		title: "Change the size of the tool",
 		action: this.changeToolSize.bind(this)
 	}, {
