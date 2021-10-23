@@ -1,4 +1,5 @@
 .vscode/
+.idea/
 client_secret*.json
 drivedata.txt
 drivedata_test.txt
