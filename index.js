@@ -1,6 +1,7 @@
 const express = require('express');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
+const fs = require('fs');
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.get('/3d', function(req, res){
 
 let id = "";
 let image = "";
+let markup = "";
 
 app.get('/paint', function(req, res){
     const queryId = req.query?.id
@@ -45,6 +47,16 @@ app.post('/savepaint', function(req, res){
     const queryImage = req.body[0].image;
     if(!!queryImage) {
         image = queryImage;
+    }
+});
+
+app.post('/savemarkup', function(req, res){
+    const queryMarkup = req.body[0].markup;
+    if(!!queryMarkup) {
+        markup = queryMarkup;
+        let data = queryMarkup.replace(/^data:image\/\w+;base64,/, '');
+        let buff = new Buffer(data, 'base64');
+        fs.writeFileSync('./public/models/skinned/UCS/skins/Highlighted_Muscles.jpg', buff);
     }
 });
 
